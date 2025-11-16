@@ -6,7 +6,7 @@ services:
     # 8080
     network_mode: host
     environment:
-    # system scope token is optional
+    # system scope token is optional, if not set, a random token will be generated, and print to log
       TOKEN: B13CFDA6-947E-4AAD-BEE8-6A475313C80F
     volumes:
       - "./config.yaml:/config.yaml"
