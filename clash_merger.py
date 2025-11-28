@@ -18,7 +18,12 @@ class ClashMerger:
         for provider in self.providers:
             provider.fetch_proxies()
 
-            for item in provider.get_proxies():
+            li = provider.get_proxies()
+            
+            if len(li) == 0:
+                continue
+
+            for item in li:
                 self.proxies.append(item)
 
             self.process_group(provider)

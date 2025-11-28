@@ -24,7 +24,6 @@ class ProxyProvider:
 
         except requests.RequestException as e:
             logging.error(f"Failed to fetch subscription: {e}")
-            raise
 
     def get_proxies(self) -> list:
         return self.proxies
